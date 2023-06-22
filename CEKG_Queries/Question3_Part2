@@ -1,0 +1,6 @@
+MATCH p1=(c1:Class)-[r:DF_C]->(c2:Class) 
+with c1.Syn as C1syn, COLLECT(r.En1_ID) AS agg, c2.Syn as c2syn
+with max(agg) as aggMax
+MATCH p2=(c2:Class)-[r2:DF_C]->(c3:Class)
+where r2.En1_ID in aggMax
+return p2 ;

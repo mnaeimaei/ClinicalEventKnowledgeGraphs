@@ -1,0 +1,5 @@
+MATCH ( c1 : Class ) <-[:OBSERVED]- ( e1 : Event ) -[df:DF]-> ( e2 : Event ) -[:OBSERVED]-> ( c2 : Class )
+MATCH (e1) -[:CORR] -> (n) <-[:CORR]- (e2)
+WHERE c1.Type = c2.Type AND n.EntityType = df.EntityType AND n.ID = df.ID  AND n.EntityType ="disorder"  
+WITH n.EntityType as EType,c1,count(df) AS df_freq,c2, n.ID as IDT
+MERGE ( c1 ) -[rel2:DF_C {EntityType:"Absolute" , count:df_freq , En1_ID:IDT , En1:"disorder" , En2:"disorder" }]-> ( c2 ) 
