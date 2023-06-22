@@ -1,8 +1,0 @@
-MATCH p1=(a1:Admission)-[:owns]->(d1:Disorder) -[:LINKED_TO]->(cl1:ICD)- [:CONNECTED_TO]->c1:Concept) 
-where c1.conceptId=449084002
-WITH a1.ID as s
-MATCH p2=(a2:Admission)-[:owns]->(d2:Disorder)- [:LINKED_TO]->(cl2:ICD)- [:CONNECTED_TO]->(c2:Concept) 
-WITH a2.ID as admissionID, c2.conceptId as SCTID, c2.termA as SCT_FSN, s
-where admissionID=s and SCTID<>449084002 
-return   SCTID, SCT_FSN, COUNT(*) AS count
-order by count desc
