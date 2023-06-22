@@ -1,4 +1,4 @@
-# ClinicalEventKnowledgeGraphs 1 #
+# ClinicalEventKnowledgeGraphs #
 ## Description ##
 This repository consists of adopted code for discovering care pathways (using event graph representation) for patients with multi-morbidity and involves Python script and Neo4j library.
 
