@@ -1,5 +1,5 @@
-MATCH (e:Event)-[r:BOND]->(:Disorder)- [:LINKED_TO]->(:ICD)-[:CONNECTED_TO] ->(c1:Concept)-[:ANCESTOR_OF*2..3]-> (c2:Concept) 
-where  c2.conceptId=74732009
+MATCH (e:Event)-[r:BOND]->(:Disorder)- [:LINKED_TO]->(:ICD)-[:CONNECTED_TO] ->(c1:Concept)-[:ANCESTOR_OF*2]-> (c2:Concept) 
+where  c2.conceptId=99
 with c1.conceptId as SCTID
 MATCH p=(e:Event)-[:BOND]->(:Disorder)- [:LINKED_TO]->(:ICD)-[:CONNECTED_TO] ->(c3:Concept)
 where c3.conceptId = SCTID
