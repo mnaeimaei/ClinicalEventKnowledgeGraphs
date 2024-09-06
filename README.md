@@ -246,16 +246,13 @@ This csv file shows the constrained node mappings derived from training a superv
 - **Disorders_ID:** This column contains the identifiers of disorder attributes.
 
 
-# 9-Building the Clinical Event Knowledge Graph
+# Step 6: Building the Clinical Event Knowledge Graph
 
-For building the clinical event knowledge graph, different steps—one for each sheet of the Excel file—were defined in a tool, with each step having two pages:
-
-1. **Run Page:** This page includes a “Run” button for creating the graph or establishing relationships between two graphs using Neo4j queries. After running the process, you can click on the “Result” button to go to the result page.
-2. **Result Page:** This page displays the Neo4j queries used during the process. To create the graph or establish relationships, several Neo4j queries need to be executed step by step. Some of these queries are used to clear the database, remove or create constraints, create or modify nodes, or create relationships between nodes. This page also shows the generated nodes and the relationships between them. Since the tool sends the queries to the Neo4j Aura Database, you can open your database in the Neo4j Aura account to view the created nodes and relationships. The queries are also saved in a text file on the tool’s profile page, allowing you to create an empty database in Neo4j Aura and run these queries one by one to recreate the graph or establish relationships between two graphs.
+For building the clinical event knowledge graph, different steps—one for each csv file defined.
 
 ## Creating a Labeled Property Graph for the Event Log
 
-By clicking the “Run” button, the Event Log sheet is converted into an Event Log graph.
+By runing the **Script01_EventLog_run.py**, the Event Log sheet is converted into an Event Log graph.
 
 <img src="./README_resources/CEKG_01.jpeg" alt="Alt text" width="600" height="900"/>
 
@@ -276,7 +273,7 @@ The queries executed step by step are as follows:
 
 ## Creating a Labeled Property Graph for Entities Attributes
 
-By clicking the “Run” button, a node will be created for each row in the Entities Attributes sheet of the Excel file:
+By runing the **Script02_EntAttr_run.py**, a node will be created for each row in the Entities Attributes sheet of the Excel file:
 
 <img src="./README_resources/CEKG_02.jpeg" alt="Alt text" width="600" height="950"/>
 
@@ -291,7 +288,7 @@ The queries executed step by step are as follows:
 
 ## Creating Relationships Between Entities and Entities Attributes
 
-By clicking the “Run” button, the Entities Attributes graph is created by establishing relationships between the entities attributes nodes, using the data from the Entities Attributes sheet in the Excel file.
+By runing the **Script03_EntAttrRel_run.py**, the Entities Attributes graph is created by establishing relationships between the entities attributes nodes, using the data from the Entities Attributes sheet in the Excel file.
 
 <img src="./README_resources/CEKG_03.jpeg" alt="Alt text" width="600" height="950"/>
 
@@ -316,7 +313,7 @@ The queries executed step by step are as follows:
 
 ## Creating a Labeled Property Graph for Activity Attributes
 
-By clicking the “Run” button, activity attributes are added to the Event Log graph. These activity attributes are sourced from the Activities Attributes sheet in the Excel file.
+By runing the **Script04_actAttr_run.py**, activity attributes are added to the Event Log graph. These activity attributes are sourced from the Activities Attributes sheet in the Excel file.
 
 <img src="./README_resources/CEKG_04.jpeg" alt="Alt text" width="700" height="1000"/>
 
@@ -332,7 +329,7 @@ The queries executed step by step are as follows:
 
 ## Creating a Labeled Property Graph for Activities Domains
 
-By clicking the “Run” button, a node is created for each row in the Activity Domain sheet of the Excel file.
+By runing the **Script05_actDomain_run.py**, a node is created for each row in the Activity Domain sheet of the Excel file.
 
 <img src="./README_resources/CEKG_05.jpeg" alt="Alt text" width="450" height="200"/>
 
@@ -347,7 +344,7 @@ The queries executed step by step are as follows:
 
 ## Creating a Labeled Property Graph for ICD Codes
 
-By clicking the “Run” button, a node is created for each row in the ICD sheet of the Excel file.
+By runing the **Script06_ICD_run.py**, a node is created for each row in the ICD sheet of the Excel file.
 
 <img src="./README_resources/CEKG_06.jpeg" alt="Alt text" width="400" height="1300"/>
 
@@ -361,7 +358,7 @@ The queries executed step by step are as follows:
 
 ## Creating Nodes for SNOMED-CT Concepts
 
-By clicking the “Run” button, a node is created for each row in the SNOMED CT Node sheet of the Excel file.
+By runing the **Script07_SctNode_run.py**, a node is created for each row in the SNOMED CT Node sheet of the Excel file.
 
 <img src="./README_resources/CEKG_07.jpeg" alt="Alt text" width="800" height="1300"/>
 
@@ -377,7 +374,7 @@ The queries executed step by step are as follows:
 
 ## Creating Relationships Between Nodes of SNOMED-CT Concepts
 
-By clicking the “Run” button, the SNOMED-CT graph is created by establishing relationships between the SNOMED CT nodes, using the data from the SNOMED CT Relationship sheet in the Excel file.
+By runing the **Script08_SctRel_run.py**, the SNOMED-CT graph is created by establishing relationships between the SNOMED CT nodes, using the data from the SNOMED CT Relationship sheet in the Excel file.
 
 <img src="./README_resources/CEKG_08.jpeg" alt="Alt text" width="800" height="1300"/>
 
@@ -391,7 +388,7 @@ The queries executed step by step are as follows:
 
 ## Connecting Diagnosed Disorders to ICD Codes
 
-By clicking the “Run” button, the Disorder nodes in the Entities Attributes graph are connected to the ICD nodes using the data from the DK3 sheet in the Excel file.
+By runing the **Script09_CNM1_run.py**, the Disorder nodes in the Entities Attributes graph are connected to the ICD nodes using the data from the DK3 sheet in the Excel file.
 
 <img src="./README_resources/CEKG_11.jpeg" alt="Alt text" width="1000" height="1300"/>
 
@@ -404,7 +401,7 @@ The queries executed step by step are as follows:
 
 ## Connecting ICD Codes to SNOMED-CT ID
 
-By clicking the “Run” button, the ICD Code graph is connected to the SNOMED-CT nodes using the data from the DK4 sheet in the Excel file.
+By runing the **Script10_CNM2_run.py**, the ICD Code graph is connected to the SNOMED-CT nodes using the data from the DK4 sheet in the Excel file.
 
 <img src="./README_resources/CEKG_12.jpeg" alt="Alt text" width="1100" height="1300"/>
 
@@ -416,7 +413,7 @@ The queries executed step by step are as follows:
 
 ## Connecting Activities to SNOMED-CT Codes
 
-By clicking the “Run” button, the Activities nodes in the Event Log graph are connected to the SNOMED-CT nodes using the data from the DK5 sheet in the Excel file.
+By runing the **Script11_CNM3_run.py**, the Activities nodes in the Event Log graph are connected to the SNOMED-CT nodes using the data from the DK5 sheet in the Excel file.
 
 <img src="./README_resources/CEKG_13.jpeg" alt="Alt text" width="5000" height="900"/>
 
@@ -429,7 +426,7 @@ The queries executed step by step are as follows:
 
 ## Connecting Activities to Domains and Connecting Domains to SNOMED-CT Codes
 
-By clicking the “Run” button, the Activity Domains in the Event Log graph are connected to the SNOMED CT nodes using the data from the DK6_1 and DK6_2 sheets in the Excel file.
+By runing the **Script12_CNM4_run.py**, the Activity Domains in the Event Log graph are connected to the SNOMED CT nodes using the data from the DK6_1 and DK6_2 sheets in the Excel file.
 
 <img src="./README_resources/CEKG_14.jpeg" alt="Alt text" width="5000" height="900"/>
 
@@ -444,7 +441,7 @@ The queries executed step by step are as follows:
 
 ## Connecting Events to Disorders and Defining Diagnosed Disorders as New Entities
 
-By clicking the “Run” button, the Event nodes in the Event Log graph are connected to the Disorder nodes in the Entities Attributes graph using the data from the DK7 sheet in the Excel file.
+By runing the **Script13_CNM5_run.py**, the Event nodes in the Event Log graph are connected to the Disorder nodes in the Entities Attributes graph using the data from the DK7 sheet in the Excel file.
 
 <img src="./README_resources/CEKG_15.jpeg" alt="Alt text" width="5000" height="900"/>
 
@@ -458,7 +455,7 @@ The queries executed step by step are as follows:
 
 ## Creating Directly Follows (DF) Relationships and Finalizing the Clinical Event Knowledge Graph
 
-By clicking the “Run” button, the clinical event knowledge graph will be fully built by creating directly follow (DF) relationships between events, activities, and entities. The DF relationships will be established based on the options selected on the care pathway options pages.
+By runing the **Script14_DF_run.py**, the clinical event knowledge graph will be fully built by creating directly follow (DF) relationships between events, activities, and entities. The DF relationships will be established based on the options selected on the care pathway options pages.
 
 - **If we select option 1 or 2:** The DF relationship is created between event nodes.
 - **If we select option 3:** The DF relationship is created between activity nodes separately for each entity, but without considering the entity_ID (e.g., for all patients, activity a1 directly follows a2 fifty times).
@@ -493,7 +490,7 @@ The queries executed step by step are as follows:
 - Creating Directly Follows Based on Activity Properties by Aggregating Different IDs of Each Entity Origin Based on Another Entity Origin (DF_C Relative)
 - Creating Directly Follows Based on Activity Properties by Aggregating Different Entity Origins (DF_C All)
 
-# Answering the Questions
+# Step 6: Answering the Questions
 
 Finally, by querying the Clinical Event Knowledge Graph, the care pathways are discovered.
 
