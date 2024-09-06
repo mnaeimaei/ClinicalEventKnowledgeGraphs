@@ -60,7 +60,7 @@ Additionally, copy the "Data" directory (not the files inside the "Data" directo
 
 The tree-like structure of your file organization is shown in the following figure:
 
-<img src="./README_resources/0_tree.png" alt="Alt text" width="500" height="1500"/>
+<img src="./README_resources/0_tree.png" alt="Alt text" width="300" height="100"/>
 
 .
 If you are using Linux, place the Linux-specific scripts in a subdirectory named linux_scripts.
