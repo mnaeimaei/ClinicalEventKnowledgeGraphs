@@ -66,14 +66,10 @@ pip install pandas
 pip install neo4j
 pip install tqdm
 pip install graphviz
+```
 
 
 
-First, clone this repository to your local machine:
-
-```bash
-git clone https://github.com/yourusername/yourrepository.git
-cd yourrepository
 
 
 
