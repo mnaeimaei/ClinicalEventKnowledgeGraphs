@@ -48,7 +48,32 @@ Once the APOC plugin is installed:
 
 
 
+## Step 2: Create a Python Project
 
+First we setup the python project with a virtual environment.
+
+
+
+### I. Clone or Download the Repository
+
+
+
+### Steps to Create a Python Project with a Virtual Environment
+
+Follow these steps to set up a Python project with a virtual environment. Once the virtual environment is activated, install the necessary packages using pip:
+```bash
+pip install pandas
+pip install neo4j
+pip install tqdm
+pip install graphviz
+
+
+
+First, clone this repository to your local machine:
+
+```bash
+git clone https://github.com/yourusername/yourrepository.git
+cd yourrepository
 
 
 
