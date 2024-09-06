@@ -1,4 +1,49 @@
-# ClinicalEventKnowledgeGraphs #
+# ClinicalEventKnowledgeGraphs (CEKG) #
+This repository contains scripts and datasets for building a clinical event knowledge graph locally. The work is related to the paper "Clinical Event Knowledge Graphs: Enriching Healthcare Event Data with Entities and Clinical Concepts," which was accepted at the 6th International Workshop on Process-Oriented Data Science for Healthcare (PODS4H23), held in conjunction with the 5th International Conference on Process Mining (ICPM 2023).
+
+
+Citation
+If you use or modify the scripts in this repository for your project, please cite the following paper:
+
+Clinical Event Knowledge Graphs: Enriching Healthcare Event Data with Entities and Clinical Concepts
+Milad Naeimaei Aali, Felix Mannhardt, Pieter Jelle Toussaint
+6th International Workshop on Process-Oriented Data Science for Healthcare (PODS4H23) in conjunction with the 5th International Conference on Process Mining (ICPM 2023)
+
+Authors
+Milad Naeimaei Aali
+Norwegian University of Science and Technology, Trondheim, Norway
+
+Felix Mannhardt
+Eindhoven University of Technology, Eindhoven, the Netherlands
+
+Pieter Jelle Toussaint
+Norwegian University of Science and Technology, Trondheim, Norway
+
+License
+This project is copyrighted by the authors (2023-now).
+
+
+
+
+Authors: 
+Milad Naeimaei Aali
+Norwegian University of Science and Technology, Trondheim, Norway
+
+Felix Mannhardt
+Eindhoven University of Technology, Eindhoven, the Netherlands
+
+Pieter Jelle Toussaint
+Norwegian University of Science and Technology, Trondheim, Norway
+
+
+
+Copyright (C) 2023-now
+
+Milad Naeimaei Aali, Norwegian University of Science and Technology, Trondheim, Norway  
+Felix Mannhardt, Eindhoven University of Technology, Eindhoven, the Netherlands  
+Pieter Jelle Toussaint, Norwegian University of Science and Technology, Trondheim, Norway  
+
+
 ## Description ##
 This repository consists of adopted code for discovering care pathways (using event graph representation) for patients with multi-morbidity and involves Python script and Neo4j library.
 
@@ -6,11 +51,7 @@ This repository consists of adopted code for discovering care pathways (using ev
 
     Under review
 
-Copyright (C) 2020-2023
 
-Milad Naeimaei Aali, Norwegian University of Science and Technology, Trondheim, Norway  
-Felix Mannhardt, Eindhoven University of Technology, Eindhoven, the Netherlands  
-Pieter Jelle Toussaint, Norwegian University of Science and Technology, Trondheim, Norway  
 ## Installation ## 
 1. Installing Python  
 2. Install packages in Python  
