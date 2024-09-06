@@ -50,7 +50,7 @@ Once the APOC plugin is installed:
 
 ## Step 2: Create a Python Project
 
-First we setup the python project with a virtual environment. Once the virtual environment is activated, install the necessary packages using pip:
+First, set up the Python project with a virtual environment. Once the virtual environment is activated, install the necessary packages using pip:
 ```bash
 pip install pandas
 pip install neo4j
