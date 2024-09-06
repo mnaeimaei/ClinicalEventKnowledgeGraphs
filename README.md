@@ -246,3 +246,258 @@ This csv file shows the constrained node mappings derived from training a superv
 - **Disorders_ID:** This column contains the identifiers of disorder attributes.
 
 
+# 9-Building the Clinical Event Knowledge Graph
+
+For building the clinical event knowledge graph, different steps—one for each sheet of the Excel file—were defined in a tool, with each step having two pages:
+
+1. **Run Page:** This page includes a “Run” button for creating the graph or establishing relationships between two graphs using Neo4j queries. After running the process, you can click on the “Result” button to go to the result page.
+2. **Result Page:** This page displays the Neo4j queries used during the process. To create the graph or establish relationships, several Neo4j queries need to be executed step by step. Some of these queries are used to clear the database, remove or create constraints, create or modify nodes, or create relationships between nodes. This page also shows the generated nodes and the relationships between them. Since the tool sends the queries to the Neo4j Aura Database, you can open your database in the Neo4j Aura account to view the created nodes and relationships. The queries are also saved in a text file on the tool’s profile page, allowing you to create an empty database in Neo4j Aura and run these queries one by one to recreate the graph or establish relationships between two graphs.
+
+## Creating a Labeled Property Graph for the Event Log
+
+By clicking the “Run” button, the Event Log sheet is converted into an Event Log graph.
+
+<img src="./README_resources/CEKG_01.jpeg" alt="Alt text" width="600" height="900"/>
+
+The queries executed step by step are as follows:
+
+- Clearing the Database
+- Clearing the Constraints
+- Creating the Constraints for the Event Log's LPG
+- Clearing a Node for the Event Log
+- Creating Nodes for Each Event
+- Creating Nodes for Each Entity Instance
+- Creating Nodes for Each Activity Instance
+- Creating Nodes for Each Activity Attribute ID Instance
+- Linking the Event Log Node to the Event Nodes with a 'HAS' Relationship
+- Linking the Event Nodes to the Entity Nodes with a 'CORR' Relationship
+- Linking the Event Nodes to the Activity Nodes with an 'OBSERVED' Relationship
+- Linking the Event Nodes to the Activity Properties Nodes with a 'MONITORED' Relationship
+
+## Creating a Labeled Property Graph for Entities Attributes
+
+By clicking the “Run” button, a node will be created for each row in the Entities Attributes sheet of the Excel file:
+
+<img src="./README_resources/CEKG_02.jpeg" alt="Alt text" width="600" height="950"/>
+
+The queries executed step by step are as follows:
+
+- Clearing the Database Except for the Previously Created Ones
+- Clearing the Constraints Except for the Previously Created Ones
+- Creating the Constraints for the Entities Attributes' LPG
+- Creating Nodes for Each of the Entities Attributes' Instances
+
+
+
+## Creating Relationships Between Entities and Entities Attributes
+
+By clicking the “Run” button, the Entities Attributes graph is created by establishing relationships between the entities attributes nodes, using the data from the Entities Attributes sheet in the Excel file.
+
+<img src="./README_resources/CEKG_03.jpeg" alt="Alt text" width="600" height="950"/>
+
+The queries executed step by step are as follows:
+
+- Clearing the database except for the previously created ones
+- Clearing the constraints except for the previously created ones
+- Creating the relationship between different entities attributes named 'INCLUDED'
+- Clearing the database except for the previously created ones
+- Clearing the constraints except for the previously created ones
+- Linking the admission treated disorders nodes to the disorders nodes with a relationship named 'INCLUDED'
+- Linking the admission untreated disorders nodes to the disorders nodes with a relationship named 'INCLUDED'
+- Linking the admission new disorders nodes to the disorders nodes with a relationship named 'INCLUDED'
+- Adding a property to the 'Multimorbidity' node to store the disorders named 'Value'
+- Adding a property to the 'Admission Treated Disorders' node to store the disorders named 'Value'
+- Adding a property to the 'Admission Untreated Disorders' node to store the disorders named 'Value'
+- Adding a property to the 'Admission New Disorders' node to store the disorders named 'Value'
+
+
+
+
+
+## Creating a Labeled Property Graph for Activity Attributes
+
+By clicking the “Run” button, activity attributes are added to the Event Log graph. These activity attributes are sourced from the Activities Attributes sheet in the Excel file.
+
+<img src="./README_resources/CEKG_04.jpeg" alt="Alt text" width="700" height="1000"/>
+
+The queries executed step by step are as follows:
+
+- Clearing the database except for the previously created ones
+- Clearing the constraints except for the previously created ones
+- Creating the constraints for the Activities Attributes’ LPG
+- Creating nodes for each feature instance (Activity Attributes Labels and Values)
+- Linking the Activity Attributes nodes to the feature nodes with a relationship named 'ASSIGN'
+
+
+
+## Creating a Labeled Property Graph for Activities Domains
+
+By clicking the “Run” button, a node is created for each row in the Activity Domain sheet of the Excel file.
+
+<img src="./README_resources/CEKG_05.jpeg" alt="Alt text" width="450" height="200"/>
+
+The queries executed step by step are as follows:
+
+- Clearing the Database Except the Previously Created Ones
+- Clearing the Constraints Except the Previously Created Ones
+- Creating the Constraints for the Activities Domain's LPG
+- Creating Nodes for Each Activities Domain Instance
+
+
+
+## Creating a Labeled Property Graph for ICD Codes
+
+By clicking the “Run” button, a node is created for each row in the ICD sheet of the Excel file.
+
+<img src="./README_resources/CEKG_06.jpeg" alt="Alt text" width="400" height="1300"/>
+
+The queries executed step by step are as follows:
+
+- Clearing the Database Except the Previously Created Ones
+- Clearing the Constraints Except the Previously Created Ones
+- Creating the Constraints for the ICD's LPG
+- Creating Nodes for Each ICD Instance
+
+
+## Creating Nodes for SNOMED-CT Concepts
+
+By clicking the “Run” button, a node is created for each row in the SNOMED CT Node sheet of the Excel file.
+
+<img src="./README_resources/CEKG_07.jpeg" alt="Alt text" width="800" height="1300"/>
+
+The queries executed step by step are as follows:
+
+- Clearing the Database Except the Previously Created Ones
+- Clearing the Constraints Except the Previously Created Ones
+- Creating the Constraints for the SNOMED-CT's LPG
+- Creating Nodes for Each SNOMED-CT Instance
+
+
+
+
+## Creating Relationships Between Nodes of SNOMED-CT Concepts
+
+By clicking the “Run” button, the SNOMED-CT graph is created by establishing relationships between the SNOMED CT nodes, using the data from the SNOMED CT Relationship sheet in the Excel file.
+
+<img src="./README_resources/CEKG_08.jpeg" alt="Alt text" width="800" height="1300"/>
+
+The queries executed step by step are as follows:
+
+- Clearing the Database Except the Previously Created Ones
+- Linking the SNOMED-CT Concepts Nodes Together with 'ANCESTOR_OF'
+- Modifying the SNOMED-CT Concepts Nodes
+
+
+
+## Connecting Diagnosed Disorders to ICD Codes
+
+By clicking the “Run” button, the Disorder nodes in the Entities Attributes graph are connected to the ICD nodes using the data from the DK3 sheet in the Excel file.
+
+<img src="./README_resources/CEKG_11.jpeg" alt="Alt text" width="1000" height="1300"/>
+
+The queries executed step by step are as follows:
+
+- Clearing the Database Except the Previously Created Ones
+- Linking the Disorder Nodes to the ICD Nodes with a Relationship Named 'LINKED_TO'
+
+
+
+## Connecting ICD Codes to SNOMED-CT ID
+
+By clicking the “Run” button, the ICD Code graph is connected to the SNOMED-CT nodes using the data from the DK4 sheet in the Excel file.
+
+<img src="./README_resources/CEKG_12.jpeg" alt="Alt text" width="1100" height="1300"/>
+
+The queries executed step by step are as follows:
+
+- Clearing the Database Except the Previously Created Ones
+- Linking the ICD Nodes to the SNOMED-CT Nodes with a Relationship Named 'CONNECTED_TO'
+
+
+## Connecting Activities to SNOMED-CT Codes
+
+By clicking the “Run” button, the Activities nodes in the Event Log graph are connected to the SNOMED-CT nodes using the data from the DK5 sheet in the Excel file.
+
+<img src="./README_resources/CEKG_13.jpeg" alt="Alt text" width="5000" height="900"/>
+
+The queries executed step by step are as follows:
+
+- Clearing the Database Except the Previously Created Ones
+- Linking the Activity Nodes to the SNOMED-CT Nodes with a Relationship Named 'MAPPED_TO'
+- Linking the Activity Properties Nodes to the SNOMED-CT Nodes with a Relationship Named 'MAPPED_TO'
+
+
+## Connecting Activities to Domains and Connecting Domains to SNOMED-CT Codes
+
+By clicking the “Run” button, the Activity Domains in the Event Log graph are connected to the SNOMED CT nodes using the data from the DK6_1 and DK6_2 sheets in the Excel file.
+
+<img src="./README_resources/CEKG_14.jpeg" alt="Alt text" width="5000" height="900"/>
+
+The queries executed step by step are as follows:
+
+- Clearing the Database Except the Previously Created Ones
+- Linking the Domain Nodes to the SNOMED-CT Nodes with a Relationship Named 'TIED'
+- Queries for Linking the Activity Nodes to the Domain or SNOMED-CT Nodes with a Relationship Named 'TYPE_OF'
+- Queries for Linking the Activity Properties Nodes to the Domain or SNOMED-CT Nodes with a Relationship Named 'TYPE_OF'
+
+
+
+## Connecting Events to Disorders and Defining Diagnosed Disorders as New Entities
+
+By clicking the “Run” button, the Event nodes in the Event Log graph are connected to the Disorder nodes in the Entities Attributes graph using the data from the DK7 sheet in the Excel file.
+
+<img src="./README_resources/CEKG_15.jpeg" alt="Alt text" width="5000" height="900"/>
+
+The queries executed step by step are as follows:
+
+- Clearing the Database Except the Previously Created Ones
+- Linking the Event Nodes to the SNOMED-CT Nodes with a Relationship Named 'CORR'
+
+
+
+
+## Creating Directly Follows (DF) Relationships and Finalizing the Clinical Event Knowledge Graph
+
+By clicking the “Run” button, the clinical event knowledge graph will be fully built by creating directly follow (DF) relationships between events, activities, and entities. The DF relationships will be established based on the options selected on the care pathway options pages.
+
+- **If we select option 1 or 2:** The DF relationship is created between event nodes.
+- **If we select option 3:** The DF relationship is created between activity nodes separately for each entity, but without considering the entity_ID (e.g., for all patients, activity a1 directly follows a2 fifty times).
+- **If we select option 4:** The DF relationship is created between activity nodes separately for each entity while considering the entity_ID (e.g., for Patient 1, activity a1 directly follows a2 thirty times; for Patient 2, twenty times).
+- **If we select option 5:** The DF relationship is created between activity nodes for one entity’s different IDs with respect to another entity’s non-reified IDs (e.g., for Patient 1, activity a1 directly follows a2 twenty-six times for Disorder 1).
+- **If we select option 6:** The DF relationship is created between the entities (e.g., between patients, admissions, and disorders).
+
+<img src="./README_resources/CEKG_16.jpeg" alt="Alt text" width="5000" height="900"/>
+
+The queries executed step by step are as follows:
+
+- Clearing the Database Except the Previously Created Ones
+- Modifying the Event Nodes
+- Creating Nodes for Reified Entities
+- Linking the Entity Nodes Together with a Relationship Named 'REL'
+- Linking the Entity Nodes to the Reified Entity Nodes with a Relationship Named 'REL'
+- Linking the Event Nodes to the Reified Entity Nodes with a Relationship Named 'CORR'
+- Creating the Directly Follows Relationship, 'DF,' Between Events
+- Removing the Polluted Directly Follows Relationships for Reified Entities
+- Removing the Wrong Directly Follows Relationships for Reified Entities
+- Removing the Reversed Directly Follows Relationships for Reified Entities
+- Removing the Polluted CORR Relationships for Reified Entities
+- Restoring CORR Relationships Wrongly Deleted in the Previous Step
+- Removing Reified Entities and Their REL Relationships Where No DF Relationship Exists Based on Those Reified Entities
+- Creating Directly Follows by Aggregating Different IDs of Each Entity (DF_C Absolute)
+- Creating Directly Follows by Aggregating Different IDs of Each Entity Origin Based on Another Entity Origin (DF_C Relative)
+- Creating Directly Follows by Aggregating Different Entity Origins (DF_C All)
+- Creating Directly Follows Relationship Between Each Entity (DF_E One)
+- Creating Directly Follows Relationship Between Different Origin Entities (DF_E Two)
+- Creating the Directly Follows Relationship Based on Activity Properties, 'DF,' Between Events
+- Creating Directly Follows Based on Activity Properties by Aggregating Different IDs of Each Entity (DF_C Absolute)
+- Creating Directly Follows Based on Activity Properties by Aggregating Different IDs of Each Entity Origin Based on Another Entity Origin (DF_C Relative)
+- Creating Directly Follows Based on Activity Properties by Aggregating Different Entity Origins (DF_C All)
+
+# Answering the Questions
+
+Finally, by querying the Clinical Event Knowledge Graph, the care pathways are discovered.
+
+<img src="./README_resources/CEKG_17.jpeg" alt="Alt text" width="5000" height="900"/>
+
+
+
