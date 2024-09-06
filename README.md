@@ -13,13 +13,13 @@ This project is copyrighted by the authors (2023-now).
 
 To get started, you'll need to set up a Neo4j graph database. Follow these steps to install Neo4j Desktop and configure your local database.
 
-### 1. Download Neo4j Desktop
+### I. Download Neo4j Desktop
 
 - Go to the [Neo4j Download page](https://neo4j.com/download/) and download Neo4j Desktop. You may need to fill out a form to access the download link.
 - After downloading, copy the **Neo4j Desktop Activation Key** when prompted.
 - In this example, we used **Neo4j Desktop v1.6.0 for Linux**, but any version of Neo4j Desktop should work.
 
-### 2. Create a Local DBMS
+### II. Create a Local DBMS
 
 Once you have installed and opened Neo4j Desktop:
 
@@ -31,7 +31,7 @@ Once you have installed and opened Neo4j Desktop:
    
 3. After entering the details, click **"Create"** and wait for the database to be set up.
 
-### 3. Install APOC Plugin
+### III. Install APOC Plugin
 
 After the DBMS is created:
 
@@ -39,7 +39,7 @@ After the DBMS is created:
 2. Find **APOC** (a collection of useful Neo4j procedures and functions).
 3. Click on **Install** to add the plugin to your database.
 
-### 4. Start the Database
+### IV. Start the Database
 
 Once the APOC plugin is installed:
 
