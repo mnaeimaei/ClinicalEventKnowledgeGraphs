@@ -58,8 +58,9 @@ pip install tqdm
 pip install graphviz
 ```
 
+## Step 3: Clone or download the repository and organizing the files in the Python Project
 
-
+First we download or clone the repository, 
 
 
 
