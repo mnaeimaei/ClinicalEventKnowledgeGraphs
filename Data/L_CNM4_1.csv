@@ -1,0 +1,16 @@
+Activity,Activity_Synonym,Activity_Domain
+admit_into,AIN,Transfer
+discharge_into,DIN,Transfer
+transfer_out_of,TOO,Transfer
+admit_out_of,AOO,Transfer
+transfer_into,TIN,Transfer
+Microbiology_Test_Result,MTR,Microbiology_Result
+Reg_from_ED,RFE,Logistic
+staying_into,SIN,Transfer
+Hospital_Admission,HA,Logistic
+Transfering_btw_services,TBS,Logistic
+staying_out_of,SOO,Transfer
+Mirobiology_Blood_Sample,MBS,Mirobiology_Sample
+Discharging_from_Hospital,DFH,Logistic
+Discharging_from_ED,DFE,Logistic
+ABG_Test,ABG,ABG

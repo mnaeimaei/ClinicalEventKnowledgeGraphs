@@ -1,0 +1,57 @@
+Origin,ID,Name,Value,Category
+Multimorbidity,1,m1,0,Absolute
+Multimorbidity,2,m2,0,Absolute
+Multimorbidity,3,m3,0,Absolute
+Multimorbidity,4,m4,0,Absolute
+Multimorbidity,5,m5,0,Absolute
+Multimorbidity,6,m6,0,Absolute
+Multimorbidity,7,m7,0,Absolute
+Multimorbidity,8,m8,0,Absolute
+Multimorbidity,9,m9,0,Absolute
+age,1,age1,57,Absolute
+age,2,age2,24,Absolute
+gender,1,gender1,male,Absolute
+gender,2,gender2,female,Absolute
+newMorbids,1,n1,0,Absolute
+newMorbids,2,n2,0,Absolute
+newMorbids,3,n3,0,Absolute
+newMorbids,4,n4,0,Absolute
+newMorbids,5,n5,0,Absolute
+newMorbids,6,n6,0,Absolute
+newMorbids,7,n7,0,Absolute
+newMorbids,8,n8,0,Absolute
+newMorbids,9,n9,0,Absolute
+treatedMorbids,1,t1,0,Absolute
+treatedMorbids,2,t2,0,Absolute
+treatedMorbids,3,t3,0,Absolute
+treatedMorbids,4,t4,0,Absolute
+treatedMorbids,5,t5,0,Absolute
+treatedMorbids,6,t6,0,Absolute
+treatedMorbids,7,t7,0,Absolute
+treatedMorbids,8,t8,0,Absolute
+treatedMorbids,9,t9,0,Absolute
+untreatedMorbids,1,u1,0,Absolute
+untreatedMorbids,2,u2,0,Absolute
+untreatedMorbids,3,u3,0,Absolute
+untreatedMorbids,4,u4,0,Absolute
+untreatedMorbids,5,u5,0,Absolute
+untreatedMorbids,6,u6,0,Absolute
+untreatedMorbids,7,u7,0,Absolute
+untreatedMorbids,8,u8,0,Absolute
+untreatedMorbids,9,u9,0,Absolute
+Disorder,1,D01,MRSA septicemia,Absolute
+Disorder,2,D02,Septicemia,Absolute
+Disorder,3,D03,MSSA infections,Absolute
+Disorder,5,D05,Vulvovaginal candidiasis,Absolute
+Disorder,7,D07,Axillary lymph node cancer,Absolute
+Disorder,6,D06,"Breast cancer, upper-outer quadrant",Absolute
+Disorder,9,D09,Low sodium,Absolute
+Disorder,11,D11,Obesity,Absolute
+Disorder,15,D15,Chronic disease anemia,Absolute
+Disorder,20,D20,PTSD,Absolute
+Disorder,40,D40,Finger deformity,Absolute
+Disorder,34,D34,UTI,Absolute
+Disorder,8,D08,Type II diabetes,Absolute
+Disorder,23,D23,Restless legs,Absolute
+Disorder,33,D33,Intestinal blockage,Absolute
+Disorder,34,D34,UTI,Absolute

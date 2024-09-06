@@ -1,0 +1,75 @@
+icd_Origin,icd_code,icd_version,icd_code_title
+ICD,3812,9,Methicillin resistant Staphylococcus aureus septicemia
+ICD,389,9,Unspecified septicemia
+ICD,4111,9,Methicillin susceptible Staphylococcus aureus in conditions classified elsewhere and of unspecified site
+ICD,7999,9,Unspecified viral infection
+ICD,1121,9,Candidiasis of vulva and vagina
+ICD,1744,9,Malignant neoplasm of upper-outer quadrant of female breast
+ICD,1963,9,Secondary and unspecified malignant neoplasm of lymph nodes of axilla and upper limb
+ICD,25000,9,"Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled"
+ICD,2761,9,Hyposmolality and/or hyponatremia
+ICD,2763,9,Alkalosis
+ICD,27800,9,"Obesity, unspecified"
+ICD,27801,9,Morbid obesity
+ICD,2809,9,"Iron deficiency anemia, unspecified"
+ICD,2811,9,Other vitamin B12 deficiency anemia
+ICD,28529,9,Anemia of other chronic disease
+ICD,29680,9,"Bipolar disorder, unspecified"
+ICD,29690,9,Unspecified episodic mood disorder
+ICD,30183,9,Borderline personality disorder
+ICD,30781,9,Tension headache
+ICD,30981,9,Posttraumatic stress disorder
+ICD,311,9,"Depressive disorder, not elsewhere classified"
+ICD,32723,9,Obstructive sleep apnea (adult)(pediatric)
+ICD,33394,9,Restless legs syndrome (RLS)
+ICD,4019,9,Unspecified essential hypertension
+ICD,41519,9,Other pulmonary embolism and infarction
+ICD,4259,9,"Secondary cardiomyopathy, unspecified"
+ICD,4538,9,Venous thrombosis nec
+ICD,49320,9,"Chronic obstructive asthma, unspecified"
+ICD,49390,9,"Asthma, unspecified type, unspecified"
+ICD,5070,9,Pneumonitis due to inhalation of food or vomitus
+ICD,51881,9,Acute respiratory failure
+ICD,53081,9,Esophageal reflux
+ICD,5609,9,Unspecified intestinal obstruction
+ICD,5990,9,"Urinary tract infection, site not specified"
+ICD,6820,9,Cellulitis and abscess of face
+ICD,6929,9,"Contact dermatitis and other eczema, unspecified cause"
+ICD,6961,9,Other psoriasis
+ICD,7197,9,Difficulty in walking
+ICD,7280,9,Infective myositis
+ICD,73620,9,Unspecified deformity of finger
+ICD,78552,9,Septic shock
+ICD,78659,9,Other chest pain
+ICD,78830,9,"Urinary incontinence, unspecified"
+ICD,83400,9,"Closed dislocation of finger, unspecified part"
+ICD,88100,9,"Open wound of forearm, without mention of complication"
+ICD,99592,9,Severe sepsis
+ICD,99664,9,Infection and inflammatory reaction due to indwelling urinary catheter
+ICD,99731,9,Ventilator associated pneumonia
+ICD,99931,9,Other and unspecified infection due to central venous catheter
+ICD,A047,10,Enterocolitis due to Clostridium difficile
+ICD,C50912,10,Malignant neoplasm of unspecified site of left female breast
+ICD,C778,10,Secondary and unspecified malignant neoplasm of lymph nodes of multiple regions
+ICD,C779,10,"Secondary and unspecified malignant neoplasm of lymph node, unspecified"
+ICD,C7800,10,Secondary malignant neoplasm of unspecified lung
+ICD,C787,10,Secondary malignant neoplasm of liver and intrahepatic bile duct
+ICD,C7951,10,Secondary malignant neoplasm of bone
+ICD,D684,10,Acquired coagulation factor deficiency
+ICD,D688,10,Other specified coagulation defects
+ICD,E039,10,"Hypothyroidism, unspecified"
+ICD,E46,10,Unspecified protein-calorie malnutrition
+ICD,E669,10,"Obesity, unspecified"
+ICD,E8339,10,Other disorders of phosphorus metabolism
+ICD,E8339,10,Other disorders of phosphorus metabolism
+ICD,E860,10,Dehydration
+ICD,E871,10,Hypo-osmolality and hyponatremia
+ICD,H532,10,Diplopia
+ICD,I10,10,Essential (primary) hypertension
+ICD,I427,10,Cardiomyopathy due to drug and external agent
+ICD,I5022,10,Chronic systolic (congestive) heart failure
+ICD,J45909,10,"Unspecified asthma, uncomplicated"
+ICD,K7290,10,"Hepatic failure, unspecified without coma"
+ICD,K7469,10,Other cirrhosis of liver
+ICD,K8020,10,Calculus of gallbladder without cholecystitis without obstruction
+ICD,L409,10,"Psoriasis, unspecified"
