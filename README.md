@@ -496,5 +496,36 @@ Finally, by querying the Clinical Event Knowledge Graph, the care pathways are d
 
 <img src="./README_resources/CEKG_17.jpeg" alt="Alt text" width="5000" height="900"/>
 
+By running **Script15_Q1_Left_Run.py**, you answer the left part of question 1. You can also answer the question by running the following Neo4j query in Neo4j Desktop.
+
+```bash
+pip install pandas
+pip install neo4j
+pip install tqdm
+pip install graphviz
+```
+
+By running **Script16_Q1_Right_Run.py**, you answer the right part of question 1. You can also answer the question by running the following Neo4j query in Neo4j Desktop.
+
+```bash
+pip install pandas
+pip install neo4j
+pip install tqdm
+pip install graphviz
+```
+
+By running **Script17_Q2_Run.py**, you answer question 2. You can also answer the question by running the following Neo4j query in Neo4j Desktop.
+
+```bash
+pip install pandas
+pip install neo4j
+pip install tqdm
+pip install graphviz
+```
+
+
+
+
+
 
 
