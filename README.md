@@ -9,25 +9,47 @@ If you use or modify the scripts in this repository for your project, please cit
 This project is copyrighted by the authors (2023-now).
 
 
+## Step 1: Start a Graph Database in Neo4j Desktop
+
+To get started, you'll need to set up a Neo4j graph database. Follow these steps to install Neo4j Desktop and configure your local database.
+
+### 1. Download Neo4j Desktop
+
+- Go to the [Neo4j Download page](https://neo4j.com/download/) and download Neo4j Desktop. You may need to fill out a form to access the download link.
+- After downloading, copy the **Neo4j Desktop Activation Key** when prompted.
+- In this example, we used **Neo4j Desktop v1.6.0 for Linux**, but any version of Neo4j Desktop should work.
+
+### 2. Create a Local DBMS
+
+Once you have installed and opened Neo4j Desktop:
+
+1. Click on **"Add"** to create a new database.
+2. Select **"Local DBMS"** and provide the following details:
+   - **Name**: Choose any name for your database.
+   - **Password**: Set the password to `12345678`. *(Note: The scripts in this project are configured to use this password.)*
+   - **Version**: Select **v5.23.0**. *(We recommend using this version, as other versions may require modifications to the scripts.)*
+   
+3. After entering the details, click **"Create"** and wait for the database to be set up.
+
+### 3. Install APOC Plugin
+
+After the DBMS is created:
+
+1. Navigate to the **Plugins** section.
+2. Find **APOC** (a collection of useful Neo4j procedures and functions).
+3. Click on **Install** to add the plugin to your database.
+
+### 4. Start the Database
+
+Once the APOC plugin is installed:
+
+1. Select your newly created database.
+2. Click **"Start"** to run the database.
 
 
-Authors: 
-Milad Naeimaei Aali
-Norwegian University of Science and Technology, Trondheim, Norway
-
-Felix Mannhardt
-Eindhoven University of Technology, Eindhoven, the Netherlands
-
-Pieter Jelle Toussaint
-Norwegian University of Science and Technology, Trondheim, Norway
 
 
 
-Copyright (C) 2023-now
-
-Milad Naeimaei Aali, Norwegian University of Science and Technology, Trondheim, Norway  
-Felix Mannhardt, Eindhoven University of Technology, Eindhoven, the Netherlands  
-Pieter Jelle Toussaint, Norwegian University of Science and Technology, Trondheim, Norway  
 
 
 ## Description ##
