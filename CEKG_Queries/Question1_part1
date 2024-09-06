@@ -1,5 +1,0 @@
-MATCH (con:Concept)
-where con.conceptId=99
-WITH con.level AS result
-UNWIND SPLIT(result, ',') AS value
-return MIN(value) AS min, MAX(value) AS max;
