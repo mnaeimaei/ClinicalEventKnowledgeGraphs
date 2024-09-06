@@ -48,11 +48,21 @@ pip install tqdm
 pip install graphviz
 ```
 
-## Step 3: Clone or download the repository and organizing the files in the Python Project
+## Step 3: Clone or Download the Repository and Organize the Files in the Python Project
 
-First we download or clone the repository, If you use linux you only need to download "Data" and "Script_for_Linux" , if you use Windows  you only need to download "Data" and "Script_for_Windows".
-Then 
+First, download or clone the repository.
+- If you are using Linux, download **Data** and **Script_for_Linux**.
+- If you are using Windows, download **Data** and **Script_for_Windows**.
 
+Copy all scripts from "Script_for_Linux" (if you are using Linux) or from "Script_for_Windows" (if you are using Windows) and paste them into the root of the project.
+
+Additionally, copy the "Data" directory (not the files inside the "Data" directory) and paste it in the root of the project.
+
+The tree-like structure of your file organization is shown in the following figure:
+
+.
+If you are using Linux, place the Linux-specific scripts in a subdirectory named linux_scripts.
+If you are using Windows, place the Windows-specific scripts in a subdirectory named windows_scripts.
 
 ## Description ##
 This repository consists of adopted code for discovering care pathways (using event graph representation) for patients with multi-morbidity and involves Python script and Neo4j library.
