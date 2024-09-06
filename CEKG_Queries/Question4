@@ -1,3 +1,0 @@
-MATCH (c3:Concept)<-[:MAPPED_TO]-(cl:Class)<- [:OBSERVED]-(e:Event)-[r:BOND]-> (d:Disorder)-[:LINKED_TO]->(n:ICD)- [:CONNECTED_TO]->(c1:Concept)
-where c1.conceptId=12
-return distinct (c3:Concept)<-[:MAPPED_TO]-(cl:Class)<- [:OBSERVED]-(e:Event)
