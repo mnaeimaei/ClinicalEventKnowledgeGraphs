@@ -1,25 +1,11 @@
-# ClinicalEventKnowledgeGraphs (CEKG) #
+# ClinicalEventKnowledgeGraphs (CEKG) 
 This repository contains scripts and datasets for building a clinical event knowledge graph locally. The work is related to the paper "Clinical Event Knowledge Graphs: Enriching Healthcare Event Data with Entities and Clinical Concepts," which was accepted at the 6th International Workshop on Process-Oriented Data Science for Healthcare (PODS4H23), held in conjunction with the 5th International Conference on Process Mining (ICPM 2023).
 
 
-Citation
-If you use or modify the scripts in this repository for your project, please cite the following paper:
+**Citation
+If you use or modify the scripts in this repository for your project, please cite the [Paper](https://doi.org/10.1007/978-3-031-56107-8_23).
 
-Clinical Event Knowledge Graphs: Enriching Healthcare Event Data with Entities and Clinical Concepts
-Milad Naeimaei Aali, Felix Mannhardt, Pieter Jelle Toussaint
-6th International Workshop on Process-Oriented Data Science for Healthcare (PODS4H23) in conjunction with the 5th International Conference on Process Mining (ICPM 2023)
-
-Authors
-Milad Naeimaei Aali
-Norwegian University of Science and Technology, Trondheim, Norway
-
-Felix Mannhardt
-Eindhoven University of Technology, Eindhoven, the Netherlands
-
-Pieter Jelle Toussaint
-Norwegian University of Science and Technology, Trondheim, Norway
-
-License
+**License**
 This project is copyrighted by the authors (2023-now).
 
 
