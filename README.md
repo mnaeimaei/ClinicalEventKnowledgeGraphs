@@ -15,7 +15,7 @@ To get started, you'll need to set up a Neo4j graph database. Follow these steps
 
 - Go to the [Neo4j Download page](https://neo4j.com/download/) and download Neo4j Desktop. You may need to fill out a form to access the download link.
 - After downloading, copy the **Neo4j Desktop Activation Key** when prompted.
-- In this example, we used **Neo4j Desktop v1.6.0 for Linux**, but any version of Neo4j Desktop should work.
+- We tested with both **Neo4j Desktop v1.6.0 for Linux** and **Neo4j Desktop v1.6.0 for Windows**, but any version of Neo4j Desktop should work.
 
 Once you have installed and opened Neo4j Desktop:
 
@@ -50,11 +50,9 @@ pip install graphviz
 
 ## Step 3: Clone or Download the Repository and Organize the Files in the Python Project
 
-First, download or clone the repository.
-- If you are using Linux, download **Data** and **Script_for_Linux**.
-- If you are using Windows, download **Data** and **Script_for_Windows**.
+First, download or clone the repository. You only need to download  **Data** and **Scripts** directories.
 
-Copy all scripts from "Script_for_Linux" (if you are using Linux) or from "Script_for_Windows" (if you are using Windows) and paste them into the root of the project.
+Copy all scripts from "Scripts" and paste them into the root of the project.
 
 Additionally, copy the "Data" directory (not the files inside the "Data" directory) and paste it in the root of the project.
 
