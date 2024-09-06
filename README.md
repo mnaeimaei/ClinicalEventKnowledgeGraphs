@@ -499,28 +499,35 @@ Finally, by querying the Clinical Event Knowledge Graph, the care pathways are d
 By running **Script15_Q1_Left_Run.py**, you answer the left part of question 1. You can also answer the question by running the following Neo4j query in Neo4j Desktop.
 
 ```bash
-pip install pandas
-pip install neo4j
-pip install tqdm
-pip install graphviz
+MATCH (con:Concept)
+where con.conceptId=99
+WITH con.level AS result
+UNWIND SPLIT(result, ',') AS value
+return MIN(value) AS min, MAX(value) AS max;
 ```
 
 By running **Script16_Q1_Right_Run.py**, you answer the right part of question 1. You can also answer the question by running the following Neo4j query in Neo4j Desktop.
 
 ```bash
-pip install pandas
-pip install neo4j
-pip install tqdm
-pip install graphviz
+MATCH (e:Event)-[r:BOND]->(:Disorder)- [:LINKED_TO]->(:ICD)-[:CONNECTED_TO] ->(c1:Concept)-[:ANCESTOR_OF*2]-> (c2:Concept) 
+where  c2.conceptId=99
+with c1.conceptId as SCTID
+MATCH p=(e:Event)-[:BOND]->(:Disorder)- [:LINKED_TO]->(:ICD)-[:CONNECTED_TO] ->(c3:Concept)
+where c3.conceptId = SCTID
+return p
 ```
 
 By running **Script17_Q2_Run.py**, you answer question 2. You can also answer the question by running the following Neo4j query in Neo4j Desktop.
 
 ```bash
-pip install pandas
-pip install neo4j
-pip install tqdm
-pip install graphviz
+MATCH p1=(a1:Admission)-[:owns]->(d1:Disorder) -[:LINKED_TO]->(cl1:ICD)- [:CONNECTED_TO]->(c1:Concept) 
+where c1.conceptId=13
+WITH a1.ID as s
+MATCH p2=(a2:Admission)-[:owns]->(d2:Disorder)- [:LINKED_TO]->(cl2:ICD)- [:CONNECTED_TO]->(c2:Concept) 
+WITH a2.ID as admissionID, c2.conceptId as SCTID, c2.termA as SCT_FSN, s
+where admissionID=s and SCTID<>99 
+return   SCTID, SCT_FSN, COUNT(*) AS count
+order by count desc
 ```
 
 
